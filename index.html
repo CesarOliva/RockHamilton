@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#f2bf45", "surface-variant": "#313538", "on-background": "#e0e3e7", "outline-variant": "#4e4635", "error": "#ffb4ab", "on-tertiary-fixed": "#171c20", "on-primary-container": "#493500", "secondary": "#ebc248", "surface-container-high": "#262a2e", "on-primary": "#3f2e00", "primary-container": "#c99a20", "inverse-surface": "#e0e3e7", "surface-container-lowest": "#0b0f12", "on-primary-fixed": "#261a00", "surface": "#101417", "outline": "#9b8f7b", "background": "#101417", "surface-container-low": "#181c1f", "inverse-primary": "#795900", "tertiary-container": "#9da2a7", "on-tertiary-container": "#34393d", "tertiary-fixed-dim": "#c2c7cc", "error-container": "#93000a", "on-tertiary-fixed-variant": "#42474c", "secondary-fixed": "#ffe08d", "on-error-container": "#ffdad6", "primary-fixed-dim": "#f2bf45", "surface-bright": "#363a3d", "tertiary": "#c2c7cc", "on-secondary-container": "#352800", "on-tertiary": "#2c3135", "on-secondary-fixed-variant": "#584400", "on-surface": "#e0e3e7", "surface-container": "#1c2023", "surface-container-highest": "#313538", "on-error": "#690005", "primary-fixed": "#ffdf9e", "surface-tint": "#f2bf45", "tertiary-fixed": "#dee3e9", "secondary-container": "#b08c0f", "on-secondary-fixed": "#241a00", "secondary-fixed-dim": "#ebc248", "surface-dim": "#101417", "on-primary-fixed-variant": "#5b4300", "on-surface-variant": "#d2c5af", "inverse-on-surface": "#2d3134", "on-secondary": "#3d2f00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem" }, "fontFamily": { "headline-xl": ["Montserrat"], "headline-sm": ["Montserrat"], "body-lg": ["Inter"], "data-mono-md": ["Inter"], "display-lg": ["Montserrat"], "display-lg-mobile": ["Montserrat"], "label-md": ["Inter"], "headline-xl-mobile": ["Montserrat"], "label-lg": ["Inter"], "headline-md": ["Montserrat"], "headline-lg": ["Montserrat"], "body-md": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "data-mono-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }] } } } }</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-primary-container/20">
+    <div class="h-20 max-w-[1440px] mx-auto px-gutter flex items-center justify-between gap-gutter">
+      <div class="flex items-center gap-space-md"><img alt="Rock Hamilton Services Logo"
+          class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1V6XwkB4evE_FzK5UMQJjpTY0dgnkqMNwy1YyFq29_wma2Ws8xK1H2FUHuopgKs3eRA5HkCQer2uZKEW5HI-QKerhG2UJgjMCHGvA-BE5SgYs-TMyZwnsaaaCESL9xwFrOqoE0jk0KxOV7KvN3G0Xx0sKzQvLA51KmwHfm3tO5LUnyhkP3pzhqkAIECeCBrJFxjIrIQh7tCSf6TvFF87N1awZFyLtKFPhYnYPRPpUHSrZjn5FJtqmtBOLGH" /><span
+          class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface border-l border-surface-variant pl-space-md hidden sm:inline-block">Rock
+          Hamilton Services</span></div>
+      <nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a
+          aria-current="page" class="transition-colors uppercase tracking-wider text-primary font-bold"
+          data-path="inicio" href="#">Inicio</a>
+          <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider"
+            data-path="nosotros" href="#">
+            Nosotros
+          </a>
+          <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider"
+          data-path="productos-y-servicios" href="#">Productos y Servicios</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider"
+          data-path="industrias" href="#">Industrias</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider"
+          data-path="contacto" href="#">Contacto</a></nav>
+      <div class="flex items-center gap-space-md"><a
+          class="hidden sm:inline-flex items-center justify-center bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm px-space-lg py-space-sm rounded-lg transition-colors duration-150 uppercase tracking-wider"
+          data-path="contacto" href="#">Solicitar cotización</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-background min-h-screen">
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- SECTION 1: HERO -->
+      <section class="relative w-full -mt-20 overflow-hidden bg-surface-container-lowest">
+        <!-- Cinematic Machinery Background -->
+        <div class="absolute inset-0 z-0">
+          <img class="w-full h-full object-cover object-center brightness-[0.38] contrast-[1.15] filter"
+            data-alt="Dark dramatic industrial factory floor with CNC automated milling machines operating with precision, metal sparks spraying in warm golden hues, overhead yellow gantry cranes, high contrast deep charcoal shadows and ambient moody workshop lighting in a heavy manufacturing plant"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy3Sv3bQFHfGICu2ROD-rskNeNYim5tOnusBTGxRxehBaupLVz3X4EYzlf-x-DeNWXrALTf8jlEVipYERJKGQA5zFDLR7Ubeh7kMY1kpMjurng7AHQnil-as-INymL4vYb1s6pdBKYUpIT5jIwYzq8lX8sFJx48Prrow3O1h4R8_7BGKK0NYugYJM5WAGFDpuoU2pews62KU4ENAmYWq-BllmQHz_oPzJ1OZjk_Z885BmlicRsM1J8mQ" />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/50">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface-container-lowest/90">
+          </div>
+          <!-- Subtle Mechanical Grid Texture -->
+          <div class="absolute inset-0 opacity-[0.03]"
+            style="background-size: 32px 32px; background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px);">
+          </div>
+        </div>
+        <!-- Hero Content Container -->
+        <div
+          class="relative z-10 max-w-[1440px] mx-auto px-gutter pt-36 pb-space-xl lg:pt-48 lg:pb-32 flex flex-col justify-between min-h-[780px]">
+          <div class="max-w-4xl space-y-space-lg">
+            <!-- Sector Tags / Telemetry Header -->
+            <div
+              class="inline-flex items-center gap-space-sm py-space-xs px-space-md rounded-DEFAULT bg-surface-container-high/80 backdrop-blur-sm border-l-2 border-primary">
+              <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase">CATÁLOGO
+                B2B</span>
+              <span class="text-surface-variant font-bold">/</span>
+              <span
+                class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase font-semibold">INDUSTRIA
+                • CONSTRUCCIÓN • AUTOMOTRIZ</span>
+            </div>
+            <!-- Main Title -->
+            <h1
+              class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-bold uppercase tracking-tight leading-[1.08] drop-shadow-sm">
+              Soluciones para la <span
+                class="text-primary underline decoration-primary/30 underline-offset-8">industria</span>, construcción y
+              sector <span class="text-primary underline decoration-primary/30 underline-offset-8">automotriz</span>.
+            </h1>
+            <!-- Subtitle -->
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              Productos, equipos y servicios con calidad, eficiencia y respaldo técnico para mantener tus operaciones en
+              movimiento continuo.
+            </p>
+            <!-- CTA Action Group -->
+            <div class="pt-space-md flex flex-wrap items-center gap-space-md">
+              <a class="inline-flex items-center justify-center bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm px-space-xl py-4 rounded-lg uppercase tracking-wider transition-all duration-150 shadow-lg shadow-primary-container/20 active:translate-y-0.5"
+                href="#contacto">
+                <span>Solicitar cotización</span>
+                <span class="material-symbols-outlined ml-space-xs text-[20px]">arrow_forward</span>
+              </a>
+              <a class="inline-flex items-center justify-center bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface hover:text-primary font-label-lg text-label-lg px-space-lg py-4 rounded-lg uppercase tracking-wider transition-all duration-150 backdrop-blur-sm"
+                href="#productos-servicios">
+                <span>Conocer nuestros servicios</span>
+                <span class="material-symbols-outlined ml-space-xs text-[18px]">engineering</span>
+              </a>
+            </div>
+          </div>
+          <!-- Trust Bar Metrics Strip -->
+          <div
+            class="pt-space-xl mt-space-xl border-t border-surface-variant/40 grid grid-cols-1 sm:grid-cols-3 gap-space-md lg:gap-space-xl">
+            <div class="flex items-center gap-space-md">
+              <div class="w-10 h-10 rounded-DEFAULT bg-surface-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-headline-sm uppercase text-on-surface">INDUSTRIA</div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Suministro y maquinaria de planta</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-md">
+              <div class="w-10 h-10 rounded-DEFAULT bg-surface-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[24px]">construction</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-headline-sm uppercase text-on-surface">CONSTRUCCIÓN</div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Herramienta y cables estructurales</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-md">
+              <div class="w-10 h-10 rounded-DEFAULT bg-surface-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[24px]">car_repair</span>
+              </div>
+              <div>
+                <div class="font-headline-sm text-headline-sm uppercase text-on-surface">AUTOMOTRIZ</div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Equipo y mantenimiento especializado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: PROPUESTA DE VALOR -->
+      <section class="w-full bg-surface-container-lowest py-space-xl lg:py-32 relative">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-xl border-b border-surface-variant/30">
+            <div class="max-w-2xl space-y-space-xs">
+              <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block">Filosofía
+                Operativa</span>
+              <h2 class="font-headline-xl text-headline-xl uppercase text-on-surface">
+                Un solo proveedor para múltiples necesidades.
+              </h2>
+            </div>
+            <div class="max-w-xl">
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Ser el proveedor integral de confianza para la industria, construcción y sector automotriz, ofreciendo
+                productos, equipos y servicios que respondan a las necesidades de nuestros clientes con calidad,
+                eficiencia y respaldo técnico.
+              </p>
+            </div>
+          </div>
+          <!-- 4 Visual Pillars Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xl">
+            <!-- Pillar 1: Calidad -->
+            <div
+              class="group relative bg-surface-container-low p-space-lg rounded-DEFAULT transition-colors hover:bg-surface-container">
+              <div class="w-full h-0.5 bg-primary absolute top-0 left-0"></div>
+              <div class="flex items-center justify-between pb-space-md">
+                <span class="font-data-mono-md text-data-mono-md text-primary font-bold">01</span>
+                <div
+                  class="w-10 h-10 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[22px]">verified</span>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface pb-space-xs">Calidad</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-normal">
+                Productos y soluciones seleccionados para responder a las necesidades de cada operación.
+              </p>
+            </div>
+            <!-- Pillar 2: Eficiencia -->
+            <div
+              class="group relative bg-surface-container-low p-space-lg rounded-DEFAULT transition-colors hover:bg-surface-container">
+              <div
+                class="w-full h-0.5 bg-surface-variant group-hover:bg-primary absolute top-0 left-0 transition-colors">
+              </div>
+              <div class="flex items-center justify-between pb-space-md">
+                <span
+                  class="font-data-mono-md text-data-mono-md text-on-surface-variant group-hover:text-primary font-bold">02</span>
+                <div
+                  class="w-10 h-10 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[22px]">speed</span>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface pb-space-xs">Eficiencia</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-normal">
+                Soluciones orientadas a reducir tiempos y mantener las operaciones funcionando.
+              </p>
+            </div>
+            <!-- Pillar 3: Respaldo técnico -->
+            <div
+              class="group relative bg-surface-container-low p-space-lg rounded-DEFAULT transition-colors hover:bg-surface-container">
+              <div
+                class="w-full h-0.5 bg-surface-variant group-hover:bg-primary absolute top-0 left-0 transition-colors">
+              </div>
+              <div class="flex items-center justify-between pb-space-md">
+                <span
+                  class="font-data-mono-md text-data-mono-md text-on-surface-variant group-hover:text-primary font-bold">03</span>
+                <div
+                  class="w-10 h-10 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[22px]">psychology</span>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface pb-space-xs">Respaldo técnico</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-normal">
+                Experiencia y soporte para encontrar la solución adecuada a cada requerimiento.
+              </p>
+            </div>
+            <!-- Pillar 4: Soluciones integrales -->
+            <div
+              class="group relative bg-surface-container-low p-space-lg rounded-DEFAULT transition-colors hover:bg-surface-container">
+              <div
+                class="w-full h-0.5 bg-surface-variant group-hover:bg-primary absolute top-0 left-0 transition-colors">
+              </div>
+              <div class="flex items-center justify-between pb-space-md">
+                <span
+                  class="font-data-mono-md text-data-mono-md text-on-surface-variant group-hover:text-primary font-bold">04</span>
+                <div
+                  class="w-10 h-10 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[22px]">all_inclusive</span>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface pb-space-xs">Soluciones integrales
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-normal">
+                Productos, mantenimiento, reparación y equipos en un mismo lugar de contacto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 3: PRODUCTOS Y SERVICIOS (8 Categories Grid) -->
+      <section class="w-full bg-surface py-space-xl lg:py-32" id="productos-servicios">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+            <div>
+              <span
+                class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block mb-space-xs">Portafolio
+                Técnico</span>
+              <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase font-bold text-on-surface">
+                Productos y servicios</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Suministro riguroso de insumos críticos, herramentales y mantenimiento especializado categorizado para
+              compras corporativas.
+            </p>
+          </div>
+          <!-- 8 Technical Category Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            <!-- Cat 1 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 01</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">minor_crash</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Mantenimiento y equipo
+                    mecánico / automotriz</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Mantenimiento, reparación y venta de equipo mecánico y automotriz.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 2 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 02</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">health_and_safety</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Seguridad industrial</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta de equipo de seguridad industrial para protección y operación segura.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 3 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 03</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">fitness_center</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Equipo deportivo</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta de equipo deportivo para diferentes necesidades y especificaciones.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 4 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 04</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">view_column</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Perfiles de aluminio</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta de perfiles de aluminio para aplicaciones industriales y comerciales.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 5 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 05</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">precision_manufacturing</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Maquinaria industrial</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta y reparación de maquinaria de uso industrial continuo.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 6 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 06</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">handyman</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Equipo para construcción</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Herramientas y equipo destinado a proyectos y operaciones de construcción.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 7 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 07</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">layers</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Hule NBR y derivados</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta de hule NBR y productos derivados para diferentes aplicaciones técnicas.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+            <!-- Cat 8 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between group hover:bg-surface-container transition-all">
+              <div class="space-y-space-md">
+                <div class="flex justify-between items-start">
+                  <span class="font-data-mono-md text-data-mono-md text-primary font-bold">CAT / 08</span>
+                  <span class="material-symbols-outlined text-primary text-[24px]">cable</span>
+                </div>
+                <div class="space-y-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cable de acero</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Venta de cable de acero en diferentes medidas y especificaciones de carga.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-space-lg mt-space-md">
+                <a class="inline-flex items-center text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant group-hover:text-primary transition-colors"
+                  href="#contacto">
+                  <span>Solicitar información</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 4: SECCIÓN DESTACADA / SOLUCIONES INTEGRALES -->
+      <section class="w-full bg-surface-container-lowest py-space-xl lg:py-32 relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+            <!-- Left Column: Visual Split Media -->
+            <div class="lg:col-span-6 relative">
+              <div class="relative rounded-DEFAULT overflow-hidden bg-surface-container-high shadow-2xl">
+                <img
+                  class="w-full h-[460px] lg:h-[540px] object-cover object-center filter contrast-[1.1] brightness-[0.85]"
+                  data-alt="High precision heavy industrial mechanical engineering technician wearing safety hardhat and high-visibility vest inspects a massive industrial turbine turbine shaft with a calibrated torque wrench in a low key dark plant environment with focused task lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuApZGxnB5iXLtRkO-0-hVDnN5PzDbXbAOD5i-9TtWsMi4tXF8FQzh00fm6Q2zoAkA2h_-4gZMkj98AZoDssmrA_2nNDD-t3GOdAnffOmSryZW4xk9iER4AN9Ja3fVGM00UL5WKTsanXVhkSeEwGaMytcut6X5kIJIXgRiZhEhjomcnHmfqF8RNes2YDnQZkO75i-KnRZGTU-5_3jiZD0Ya_1VXp4NsSu_DN5kNi6GEbuqvgJq5Kq42Tdw" />
+                <!-- Hairline gold frame element -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                </div>
+                <!-- Live telemetry badge -->
+                <div
+                  class="absolute bottom-6 left-6 right-6 p-space-md bg-surface-container-high/90 backdrop-blur-md rounded-DEFAULT">
+                  <div class="flex items-center justify-between text-on-surface">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                      <span class="font-data-mono-md text-data-mono-md text-primary uppercase font-bold">Capacidad
+                        Operativa</span>
+                    </div>
+                    <span class="font-data-mono-md text-data-mono-md text-on-surface-variant">24/7 SOPORTE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Formula & Description -->
+            <div class="lg:col-span-6 space-y-space-lg">
+              <div class="space-y-space-xs">
+                <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block">Enfoque
+                  360</span>
+                <h2
+                  class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase font-bold text-on-surface leading-tight">
+                  Más que productos: soluciones para tu operación.
+                </h2>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Combinamos suministro de equipo, productos especializados, mantenimiento y reparación para ayudarte a
+                resolver las necesidades de tu operación desde un solo lugar.
+              </p>
+              <!-- Core Formula Blocks -->
+              <div class="py-space-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm items-center">
+                  <div class="p-space-md bg-surface-container text-center rounded-DEFAULT border-t-2 border-primary">
+                    <span
+                      class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider">EQUIPO</span>
+                    <span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Suministro
+                      calificado</span>
+                  </div>
+                  <div class="p-space-md bg-surface-container text-center rounded-DEFAULT border-t-2 border-primary">
+                    <span
+                      class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider">SERVICIO</span>
+                    <span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Reparación técnica</span>
+                  </div>
+                  <div class="p-space-md bg-surface-container text-center rounded-DEFAULT border-t-2 border-primary">
+                    <span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider">RESPALDO
+                      TÉCNICO</span>
+                    <span class="block font-body-sm text-body-sm text-on-surface-variant mt-1">Asesoría directa</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex items-center gap-space-md">
+                <a class="inline-flex items-center bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm px-space-lg py-3 rounded-lg uppercase tracking-wider transition-colors"
+                  href="#contacto">
+                  <span>Hablar con un asesor técnico</span>
+                  <span class="material-symbols-outlined ml-2 text-[18px]">build</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 5: POR QUÉ ROCK HAMILTON SERVICES (6 Key Values) -->
+      <section class="w-full bg-surface py-space-xl lg:py-32">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-space-xl space-y-space-xs">
+            <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block">Garantía
+              Institucional</span>
+            <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase font-bold text-on-surface">
+              Un aliado para tu operación
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+              Diseñados para mitigar el riesgo operativo mediante una coordinación rigurosa y un abastecimiento técnico
+              seguro.
+            </p>
+          </div>
+          <!-- 6 Technical Grid Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+            <!-- Value 1 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">support_agent</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Atención personalizada
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Canal directo para atender y evaluar de forma ágil las solicitudes específicas de cada cliente.
+              </p>
+            </div>
+            <!-- Value 2 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">domain</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Soluciones para
+                diferentes industrias</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Capacidad para cubrir requerimientos del sector manufacturero, obra civil y ramas mecánicas.
+              </p>
+            </div>
+            <!-- Value 3 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">inventory_2</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Productos y equipos
+                especializados</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Insumos con características y normativas de alta exigencia para operaciones críticas.
+              </p>
+            </div>
+            <!-- Value 4 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">home_repair_service</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Mantenimiento y
+                reparación</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Servicios técnicos orientados a restablecer y prolongar la vida útil de su maquinaria.
+              </p>
+            </div>
+            <!-- Value 5 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">verified_user</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Respaldo técnico</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Orientación puntual en cada compra o servicio para asegurar el ajuste a sus parámetros.
+              </p>
+            </div>
+            <!-- Value 6 -->
+            <div
+              class="bg-surface-container-low p-space-lg rounded-DEFAULT hover:bg-surface-container transition-all group">
+              <div
+                class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">target</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Enfoque en las
+                necesidades del cliente</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Adaptabilidad constante para estructurar entregas y presupuestos según prioridades reales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 6: INDUSTRIAS (3 Large Impactful Cards) -->
+      <section class="w-full bg-surface-container-lowest py-space-xl lg:py-32" id="industrias">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <!-- Section Header -->
+          <div class="max-w-3xl mb-space-xl space-y-space-xs">
+            <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block">Mercados
+              Atendidos</span>
+            <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase font-bold text-on-surface">
+              Industrias</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant pt-space-xs leading-relaxed">
+              Atendemos las necesidades de empresas y profesionales que requieren productos, equipos y servicios para
+              mantener sus operaciones funcionando.
+            </p>
+          </div>
+          <!-- 3 Large Cards Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+            <!-- Industry 1: Industria -->
+            <div
+              class="relative group rounded-DEFAULT overflow-hidden bg-surface-container-low flex flex-col justify-end min-h-[440px] p-space-lg">
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-50 contrast-125"
+                  data-alt="Industrial steel manufacturing floor with heavy assembly lines, robotic arms and workers with safety masks in dark moody atmospheric high-contrast tones"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_U-ST3y00L6MQYr0FSs5oI_iGFpoSaUeW-mMUTbMBIzTvZ6o2f_X_epvEEylNJlWqEwvnl4ZPv8bNSnvHKCn_hvIKVqsXLt61PgmKJfqpu_OdtXaBIetqpNZqNOHrHJ8bWg6JcEUn_QW_ylA7jLbrgMlWFkPFKj9G4h63ZWH8ZteOPnzsYj7jQr-yq_QzhUc5T-FQ0eDa5dCgRAX36Q3Ed1Dqje8_FUxXe_hyloYtMQyLmSKLvtSrMg" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+                </div>
+              </div>
+              <div class="relative z-10 space-y-space-sm">
+                <div
+                  class="inline-flex py-1 px-3 bg-primary/20 text-primary font-data-mono-md text-label-md rounded-DEFAULT uppercase">
+                  SECTOR 01
+                </div>
+                <h3 class="font-headline-xl text-headline-xl uppercase text-on-surface font-bold">INDUSTRIA</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Soluciones integrales para plantas, líneas de producción y manufactura pesada.
+                </p>
+                <div class="pt-space-xs">
+                  <a class="inline-flex items-center text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:translate-x-1 transition-transform"
+                    href="#contacto">
+                    <span>Ver suministros de planta</span>
+                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Industry 2: Construcción -->
+            <div
+              class="relative group rounded-DEFAULT overflow-hidden bg-surface-container-low flex flex-col justify-end min-h-[440px] p-space-lg">
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-50 contrast-125"
+                  data-alt="Construction site at twilight with heavy reinforced concrete structures, structural steel cable rigging, and industrial floodlights in an architectural framing"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJIc5b8D2HfYrBtaNPfKGvPmojFO1GhnEKQ2emwrA0pnvB3aguGZO9DFxb3e7wRLeKDRYHTz_ST2Jj24zDxo7WrBUQCUC7TSmLl_xCFhm1EE-NyImeZh_dWdplp2pMxY5M8SsDpbaF5tO4UHL_zerGrWKW7SuVXEj20W-5fZ2ZNza_5uwgdpVpF3rqxuoq8CimYlhiy5pZALyYyO-rMlWUFhmSbDWEKeFmmdOhOalCF3ci7T_5BGQOA" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+                </div>
+              </div>
+              <div class="relative z-10 space-y-space-sm">
+                <div
+                  class="inline-flex py-1 px-3 bg-primary/20 text-primary font-data-mono-md text-label-md rounded-DEFAULT uppercase">
+                  SECTOR 02
+                </div>
+                <h3 class="font-headline-xl text-headline-xl uppercase text-on-surface font-bold">CONSTRUCCIÓN</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Equipos, cables y perfiles para proyectos de edificación e infraestructura.
+                </p>
+                <div class="pt-space-xs">
+                  <a class="inline-flex items-center text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:translate-x-1 transition-transform"
+                    href="#contacto">
+                    <span>Explorar equipamiento</span>
+                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Industry 3: Automotriz -->
+            <div
+              class="relative group rounded-DEFAULT overflow-hidden bg-surface-container-low flex flex-col justify-end min-h-[440px] p-space-lg">
+              <div class="absolute inset-0 z-0">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-50 contrast-125"
+                  data-alt="Automotive mechanical repair workshop facility with precision tools, hydraulic diagnostic lifts, engine repair bay illuminated by clean warm amber mechanical lights"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcvsZYiahTU92dpA6LY12MVcWD1Rn4NIqKuJzh5YWzmJan9-Yg8CJRdJ2lktmS26HQbQ6QPni0HGQExO98cxf9BOmqXTdd16xzPfUe8pgTN2PF8HUYhfBX3j5MBETf79nRli9BJJFZ4ryp9uvcYxJ8IpAwFdRkS6PauXSYs_um_4cJjM-rupjIgi4xqyd8JTy2ETcriecc2oGa41eT-TxTi6NKsVKiy1NmqaVkH2moh7R53n1cQisNpA" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+                </div>
+              </div>
+              <div class="relative z-10 space-y-space-sm">
+                <div
+                  class="inline-flex py-1 px-3 bg-primary/20 text-primary font-data-mono-md text-label-md rounded-DEFAULT uppercase">
+                  SECTOR 03
+                </div>
+                <h3 class="font-headline-xl text-headline-xl uppercase text-on-surface font-bold">AUTOMOTRIZ</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Mantenimiento de equipo de taller, refacciones mecánicas y soporte técnico especializado.
+                </p>
+                <div class="pt-space-xs">
+                  <a class="inline-flex items-center text-primary font-label-lg text-label-lg uppercase tracking-wider group-hover:translate-x-1 transition-transform"
+                    href="#contacto">
+                    <span>Servicios de taller</span>
+                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 7: CALL TO ACTION (CTA) -->
+      <section class="w-full bg-surface-container-lowest py-space-xl lg:py-24 relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-gutter relative z-10">
+          <div class="relative rounded-DEFAULT bg-surface-container-low p-space-xl lg:p-20 overflow-hidden shadow-2xl">
+            <!-- Gold Edge Accent Line -->
+            <div class="w-full h-1 bg-primary absolute top-0 left-0"></div>
+            <div class="max-w-3xl space-y-space-md">
+              <span class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase">Atención
+                Ejecutiva</span>
+              <h2
+                class="font-display-lg text-display-lg-mobile md:text-display-lg font-bold uppercase text-on-surface leading-tight">
+                ¿Necesitas una solución para tu operación?
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Cuéntanos qué necesitas y nuestro equipo te ayudará a encontrar la opción adecuada.
+              </p>
+              <div class="pt-space-md flex flex-wrap items-center gap-space-md">
+                <a class="inline-flex items-center justify-center bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm px-space-xl py-4 rounded-lg uppercase tracking-wider transition-colors shadow-md"
+                  href="#contacto">
+                  <span>Solicitar cotización</span>
+                  <span class="material-symbols-outlined ml-2 text-[20px]">request_quote</span>
+                </a>
+                <a class="inline-flex items-center justify-center bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg px-space-lg py-4 rounded-lg uppercase tracking-wider transition-colors"
+                  href="#contacto">
+                  <span>Contactar</span>
+                  <span class="material-symbols-outlined ml-2 text-[18px]">chat</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 8: CONTACTO Y UBICACIÓN -->
+      <section class="w-full bg-surface py-space-xl lg:py-32" id="contacto">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <!-- Section Title -->
+          <div class="mb-space-xl">
+            <span
+              class="font-data-mono-md text-data-mono-md text-primary tracking-widest uppercase block mb-space-xs">Canal
+              Directo</span>
+            <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase font-bold text-on-surface">
+              Contáctanos</h2>
+          </div>
+          <!-- Two-Column Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+            <!-- Left Side: Corporate Info & Map -->
+            <div class="lg:col-span-6 space-y-space-lg">
+              <div class="bg-surface-container-low p-space-lg rounded-DEFAULT space-y-space-md">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Razón
+                    Social</span>
+                  <h3 class="font-headline-lg text-headline-lg uppercase text-on-surface">ROCK HAMILTON SERVICES S.A. DE
+                    C.V.</h3>
+                </div>
+                <div class="space-y-space-sm pt-space-xs">
+                  <div class="flex items-start gap-space-sm">
+                    <span class="material-symbols-outlined text-primary text-[20px] mt-1">location_on</span>
+                    <div>
+                      <div class="font-label-lg text-label-lg text-on-surface uppercase">Dirección Corporativa</div>
+                      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        José Vasconcelos 600. Local 204.<br />
+                        Colonia Lomas del Valle, CP 66256,<br />
+                        San Pedro Garza García, Nuevo León, México
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Contact Channels -->
+                  <div class="pt-space-sm space-y-space-sm border-t border-surface-variant/40">
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary text-[20px]">call</span>
+                      <div>
+                        <span class="font-label-sm text-label-sm uppercase text-outline block">Teléfono</span>
+                        <span class="font-body-md text-body-md text-on-surface">TBD (Disponible próximamente)</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary text-[20px]">chat</span>
+                      <div>
+                        <span class="font-label-sm text-label-sm uppercase text-outline block">WhatsApp</span>
+                        <span class="font-body-md text-body-md text-on-surface">TBD (Atención directa)</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+                      <div>
+                        <span class="font-label-sm text-label-sm uppercase text-outline block">Email</span>
+                        <span class="font-body-md text-body-md text-on-surface">TBD (Cotizaciones)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Stylized Dark Industrial Location Map -->
+              <div class="relative rounded-DEFAULT overflow-hidden bg-surface-container-high h-[260px] shadow-lg">
+                <div class="w-full h-full bg-cover bg-center filter grayscale contrast-125 brightness-90"
+                  data-location="José Vasconcelos 600, San Pedro Garza García, Nuevo León, México" style=""></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-surface-container-lowest/90 backdrop-blur-sm p-space-sm rounded-DEFAULT">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+                    <span class="font-data-mono-md text-data-mono-md text-on-surface">San Pedro Garza García,
+                      N.L.</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold">25.6572° N, 100.4026°
+                    W</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side: B2B Quote Request Form -->
+            <div class="lg:col-span-6 bg-surface-container-low p-space-lg lg:p-space-xl rounded-DEFAULT shadow-xl">
+              <div class="mb-space-md">
+                <h3 class="font-headline-lg text-headline-lg uppercase text-on-surface">Solicitar cotización</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Complete los detalles de su
+                  requerimiento para una propuesta técnica y económica formal.</p>
+              </div>
+              <form class="space-y-space-md" id="quoteForm"
+                onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); this.reset();">
+                <div class="space-y-space-xs">
+                  <label
+                    class="block font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold"
+                    for="fullName">Nombre completo *</label>
+                  <input
+                    class="w-full h-10 px-3 bg-surface-container-lowest rounded-DEFAULT text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                    id="fullName" placeholder="Ej. Ing. Carlos Garza" required="" type="text" />
+                </div>
+                <div class="space-y-space-xs">
+                  <label
+                    class="block font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold"
+                    for="companyName">Empresa / Razón Social *</label>
+                  <input
+                    class="w-full h-10 px-3 bg-surface-container-lowest rounded-DEFAULT text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                    id="companyName" placeholder="Ej. Manufacturas del Norte S.A." required="" type="text" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div class="space-y-space-xs">
+                    <label
+                      class="block font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold"
+                      for="phone">Teléfono *</label>
+                    <input
+                      class="w-full h-10 px-3 bg-surface-container-lowest rounded-DEFAULT text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                      id="phone" placeholder="+52 81 0000 0000" required="" type="tel" />
+                  </div>
+                  <div class="space-y-space-xs">
+                    <label
+                      class="block font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold"
+                      for="email">Correo electrónico *</label>
+                    <input
+                      class="w-full h-10 px-3 bg-surface-container-lowest rounded-DEFAULT text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all"
+                      id="email" placeholder="carlos@empresa.com" required="" type="email" />
+                  </div>
+                </div>
+                <div class="space-y-space-xs">
+                  <label
+                    class="block font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold"
+                    for="requirements">¿Qué necesitas? *</label>
+                  <textarea
+                    class="w-full p-3 bg-surface-container-lowest rounded-DEFAULT text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none"
+                    id="requirements"
+                    placeholder="Describa requerimientos de productos, equipos o servicios específicos (ej. cable de acero de 1/2 pulgada, mantenimiento de torno CNC, hule NBR vulcanizado...)"
+                    required="" rows="4"></textarea>
+                </div>
+                <div
+                  class="hidden p-space-sm bg-primary/10 rounded-DEFAULT text-primary font-body-sm text-body-sm flex items-center gap-space-xs"
+                  id="formSuccess">
+                  <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                  <span>Solicitud recibida. Un asesor técnico revisará los requerimientos para responder a la
+                    brevedad.</span>
+                </div>
+                <div class="pt-space-xs">
+                  <button
+                    class="w-full h-12 flex items-center justify-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider rounded-lg transition-colors shadow-md active:translate-y-0.5"
+                    type="submit">
+                    <span>Solicitar cotización</span>
+                    <span class="material-symbols-outlined text-[20px]">send</span>
+                  </button>
+                </div>
+                <div class="text-center pt-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tus datos serán
+                    tratados bajo estricta confidencialidad corporativa.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low border-t border-surface-variant/40 pt-space-xl pb-space-lg">
+    <div class="max-w-[1440px] mx-auto px-gutter">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-surface-variant/30">
+        <div class="space-y-space-md">
+          <div class="flex items-center gap-space-sm"><img alt="Rock Hamilton Services Logo"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1V6XwkB4evE_FzK5UMQJjpTY0dgnkqMNwy1YyFq29_wma2Ws8xK1H2FUHuopgKs3eRA5HkCQer2uZKEW5HI-QKerhG2UJgjMCHGvA-BE5SgYs-TMyZwnsaaaCESL9xwFrOqoE0jk0KxOV7KvN3G0Xx0sKzQvLA51KmwHfm3tO5LUnyhkP3pzhqkAIECeCBrJFxjIrIQh7tCSf6TvFF87N1awZFyLtKFPhYnYPRPpUHSrZjn5FJtqmtBOLGH" /><span
+              class="font-headline-sm text-headline-sm uppercase text-on-surface">Rock Hamilton</span></div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Soluciones industriales de alta
+            ingeniería, suministro y mantenimiento corporativo con estándares de clase mundial.</p>
+        </div>
+        <div class="space-y-space-sm">
+          <div class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide">Sede Corporativa</div>
+          <div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed flex items-start gap-space-xs">
+            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">location_on</span><span>José
+              Vasconcelos 600 Local 204,<br />San Pedro Garza García, NL, México</span></div>
+        </div>
+        <div class="space-y-space-sm">
+          <div class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide">Contacto Directo</div>
+          <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="flex items-center gap-space-xs hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined text-primary text-[18px]">chat</span><span>WhatsApp: (TBD)</span></a>
+            </li>
+            <li><a class="flex items-center gap-space-xs hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined text-primary text-[18px]">call</span><span>Teléfono: (TBD)</span></a>
+            </li>
+            <li><a class="flex items-center gap-space-xs hover:text-primary transition-colors" href="#"><span
+                  class="material-symbols-outlined text-primary text-[18px]">mail</span><span>Email: (TBD)</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-space-sm">
+          <div class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide">Navegación</div>
+          <ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="nosotros" href="#">Nosotros</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="productos-y-servicios" href="#">Productos y
+                Servicios</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="industrias" href="#">Industrias</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="contacto" href="#">Solicitar Cotización</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span
+          class="font-label-sm text-label-sm text-outline uppercase tracking-wider">© 2024 Rock Hamilton Services S.A.
+          de C.V. Todos los derechos reservados.</span>
+        <div class="flex items-center gap-space-lg font-label-sm text-label-sm text-outline"><a
+            class="hover:text-on-surface transition-colors" href="#">Aviso de Privacidad</a><a
+            class="hover:text-on-surface transition-colors" href="#">Términos y Condiciones</a><a
+            class="hover:text-on-surface transition-colors" href="#">Compliance</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
